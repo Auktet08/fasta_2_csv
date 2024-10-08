@@ -16,6 +16,7 @@ This program assumes a specific file organization format. There should be a fold
 \*Note, title of "working directory" is irrelevant. 
 \*\*There can be other files inside the "working directory"
 
+```
 your_working_directory
   |
   + input
@@ -23,6 +24,7 @@ your_working_directory
   |
   . misc
   . misc
+```
 
 ## Locate Working Directory
 Inside the `fasta_2_csv` folder there is a folder called `routing.txt`
