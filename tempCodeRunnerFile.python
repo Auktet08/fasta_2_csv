@@ -1,0 +1,6 @@
+import os
+
+if not os.path.isfile(f"/Users/northk/Documents/gozzi/fasta/index/nc_011916.fasta.fai"):
+    print("no file")
+else:
+    print("file exists")
