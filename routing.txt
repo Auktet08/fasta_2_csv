@@ -1,11 +1,14 @@
 working directory = /Users/user/your_working_directory_here
 
 The default file structure is:
-working_directory:
-    + 'input'
-    + 'index'
-    . misc x
-    . misc y
-    . misc z
+
+your_working_directory
+  |
+  + input
+  + index
+  |
+  . misc
+  . misc
+
 Specify location of a specific index or 
 input folder using command line arguments
