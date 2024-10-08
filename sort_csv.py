@@ -62,7 +62,8 @@ def pairing(dir_list):
 def indexer():
     try:
         if sys.argv[1] == "-i":
-            index = bowtie(sys.argv[2])
+            bowtie(sys.argv[2])
+            index = sys.argv[2]
         elif sys.argv[1] is not None:
             index = sys.argv[1]
     except IndexError:
@@ -71,11 +72,11 @@ def indexer():
     if not os.path.isfile(f"{index_path}/{index}.fasta.fai"):
         # create fasta.fai
         print("===create .fasta.fai samtools===")
-        print(f"samtools faidx {index_path}/{index}.fasta")
+        print(f"samtools faidx {index_path}/{index}.fasta\n")
     return index
 
 def bowtie(index):
-    print("=== create bowtie index ===")
+    print("\n=== create bowtie index ===")
     index_genome_file = f"{index_path}/{index}.fasta"   
     # create index inside index folder then leave index folder
     print(f"cd {index_path} \\")
@@ -144,7 +145,7 @@ def samtools(output_path, output_file, temp_path, r1, offset=1):
 
 def igvtools(output_path, output_file, index, r1, offset=1):
     print("\n=== igvtools ===\n")
-    print(f"cd {output_path}")
+    print(f"cd {output_path} \\")
     window_size = 1000
     for i in range(len(r1)):
         id_num = i + offset
